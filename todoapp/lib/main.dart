@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/models/task.dart';
 
+void main() {
+  runApp(MaterialApp(
+    home: HomePage(),
+  ));
+}
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
