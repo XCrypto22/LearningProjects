@@ -25,11 +25,12 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         actions: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(right: 13),
             child: Icon(
               Icons.notifications_outlined,
               size: 30,
+              color: Colors.white,
             ),
           ),
           Padding(
@@ -130,8 +131,8 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.only(right: 18),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             'Category',
                             style: TextStyle(
                                 fontFamily: 'Roboto',
@@ -139,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                                 color: AppColors.fontColor,
                                 fontWeight: FontWeight.bold),
                           ),
-                          const Text(
+                          Text(
                             'See all',
                             style: TextStyle(
                                 fontFamily: 'Roboto',
@@ -179,8 +180,8 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.only(right: 18),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             'Top rated',
                             style: TextStyle(
                                 fontFamily: 'Roboto',
@@ -188,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                                 color: AppColors.fontColor,
                                 fontWeight: FontWeight.bold),
                           ),
-                          const Text(
+                          Text(
                             'See all',
                             style: TextStyle(
                                 fontFamily: 'Roboto',
