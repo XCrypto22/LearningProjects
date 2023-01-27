@@ -1,5 +1,5 @@
 class Task {
-  final String title;
+  String title;
   final String description;
   final DateTime dueDate;
   bool isCompleted;
