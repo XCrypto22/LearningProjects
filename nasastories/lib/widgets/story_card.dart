@@ -24,7 +24,11 @@ class SettingItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.only(left: 15, right: 15),
+        padding: const EdgeInsets.only(
+          left: 15,
+          right: 15,
+        ),
+        margin: const EdgeInsets.only(bottom: 5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: cardColor,
@@ -45,15 +49,12 @@ class SettingItem extends StatelessWidget {
                 ? [
                     Container(
                       padding: EdgeInsets.all(2),
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: primary,
-                          ),
-                          shape: BoxShape.circle),
                       child: CustomImage(
                         image!,
-                        width: 100,
-                        height: 100,
+                        width: 80,
+                        height: 80,
+                        isNetwork: false,
+                        radius: 15,
                       ),
                     ),
                     SizedBox(
@@ -63,7 +64,10 @@ class SettingItem extends StatelessWidget {
                       child: Text(
                         title,
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
+                            fontFamily: 'Poppins',
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 79, 80, 82)),
                       ),
                     ),
                     Icon(
@@ -77,7 +81,7 @@ class SettingItem extends StatelessWidget {
                       child: Text(
                         title,
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w500),
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Icon(

@@ -8,48 +8,63 @@ const int port = 5000;
 
 class StoriesRemoteService {
   Future<List<Stories>?> getStories() async {
-    var client = http.Client();
+    try {
+      var client = http.Client();
 
-    var uri = Uri.parse('http://$server:$port/data');
+      var uri = Uri.parse('http://snrelton.pythonanywhere.com/data');
 
-    var response = await client.get(uri);
+      var response = await client.get(uri);
 
-    if (response.statusCode == 200) {
-      var json = response.body;
-      return storiesFromJson(json);
+      if (response.statusCode == 200) {
+        var json = response.body;
+        return storiesFromJson(json);
+      }
+    } catch (e) {
+      print("Connection Error - Couldn't fetch stories");
     }
+
     return null;
   }
 }
 
 class GalleryRemoteService {
   Future<List<Gallery>?> getPhotos() async {
-    var client = http.Client();
+    try {
+      var client = http.Client();
 
-    var uri = Uri.parse('http://$server:$port/gallery');
+      var uri = Uri.parse('http://snrelton.pythonanywhere.com/gallery');
 
-    var response = await client.get(uri);
+      var response = await client.get(uri);
 
-    if (response.statusCode == 200) {
-      var json = response.body;
-      return galleryFromJson(json);
+      if (response.statusCode == 200) {
+        var json = response.body;
+        return galleryFromJson(json);
+      }
+    } catch (e) {
+      print("Connection Error - Couldn't fetch photos");
     }
+
     return null;
   }
 }
 
 class MissionsRemoteService {
   Future<List<Missions>?> getMissions() async {
-    var client = http.Client();
+    try {
+      var client = http.Client();
 
-    var uri = Uri.parse('http://$server:$port/missions');
+      var uri = Uri.parse('http://snrelton.pythonanywhere.com/missions');
 
-    var response = await client.get(uri);
+      var response = await client.get(uri);
 
-    if (response.statusCode == 200) {
-      var json = response.body;
-      return missionsFromJson(json);
+      if (response.statusCode == 200) {
+        var json = response.body;
+        return missionsFromJson(json);
+      }
+    } catch (e) {
+      print("Connection Error - Couldn't fetch missions");
     }
+
     return null;
   }
 }

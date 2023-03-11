@@ -28,6 +28,7 @@ class PopularItem extends StatelessWidget {
             Container(
               child: CustomImage(
                 image_url,
+                isNetwork: false,
                 radius: raduis,
                 width: double.infinity,
                 height: double.infinity,
